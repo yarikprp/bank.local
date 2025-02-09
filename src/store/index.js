@@ -5,7 +5,8 @@ import request from './modules/request.module'
 export default createStore({
   state() {
     return {
-      message: null 
+      message: null,
+      sidebar: false
     }
   },
   getters: {
@@ -16,6 +17,12 @@ export default createStore({
     },
     clearMessage(state) {
       state.message = null
+    },
+    openSidebar(state) {
+      state.sidebar = true
+    },
+    closeSidebar(state) {
+      state.sidebar = false
     }
   },
   actions: {
